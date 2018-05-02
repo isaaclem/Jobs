@@ -1,6 +1,7 @@
 import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
+import Reactotron from 'reactotron-react-native';
 
 import store from './store';
 import AuthScreen from './screens/AuthScreen';
@@ -9,6 +10,8 @@ import MapScreen from './screens/MapScreen';
 import DeckScreen from './screens/DeckScreen';
 import ReviewScreen from './screens/ReviewScreen';
 import SettingsScreen from './screens/SettingsScreen';
+
+import './ReactotronConfig';
 
 const MainNavigator = TabNavigator({
   welcome: { screen: WelcomeScreen },
@@ -28,7 +31,12 @@ const MainNavigator = TabNavigator({
 });
 
 export default class App extends React.Component {
+  componentDidMount() {
+    Reactotron.clear();
+  }
+
   render() {
+    //Reactotron.warn('*glares*');
     return (
       <Provider store={store}>
         <MainNavigator />

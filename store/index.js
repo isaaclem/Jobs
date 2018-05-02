@@ -1,8 +1,10 @@
-import { createStore, compose, applyMiddleware } from 'redux';
+import { compose, applyMiddleware } from 'redux';
+import Reactotron from 'reactotron-react-native';
 import thunk from 'redux-thunk';
 import reducers from '../reducers';
+import '../ReactotronConfig';
 
-const store = createStore(
+const store = Reactotron.createStore(
   reducers,
   {},
   compose(

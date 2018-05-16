@@ -1,6 +1,8 @@
 import { compose, applyMiddleware } from 'redux';
 import Reactotron from 'reactotron-react-native';
 import thunk from 'redux-thunk';
+//import { persistStore, autoRehydrate } from 'redux-persist';
+//import { AsyncStorage } from 'react-native';
 import reducers from '../reducers';
 import '../ReactotronConfig';
 

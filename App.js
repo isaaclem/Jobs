@@ -26,6 +26,11 @@ const MainNavigator = TabNavigator({
           settings: { screen: SettingsScreen }
         })
       }
+    }, {
+      tabBarPosition: 'bottom',
+      tabBarOptions: {
+        labelStyle: { fontSize: 12 }
+      }
     })
   }
 }, {
